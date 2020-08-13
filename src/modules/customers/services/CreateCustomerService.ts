@@ -13,7 +13,7 @@ interface IRequest {
 @injectable()
 class CreateCustomerService {
   constructor(
-    @inject('CustomerRepository')
+    @inject('CustomersRepository')
     private customersRepository: ICustomersRepository,
   ) {}
 
@@ -26,10 +26,12 @@ class CreateCustomerService {
       throw new AppError('E-mail already in use');
     }
 
-    return await this.customersRepository.create({
+    const customer = await this.customersRepository.create({
       name,
       email,
     });
+
+    return customer;
   }
 }
 

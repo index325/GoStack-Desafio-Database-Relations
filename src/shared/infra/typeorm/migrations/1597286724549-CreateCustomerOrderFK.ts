@@ -16,6 +16,6 @@ export class CreateCustomerOrderFK1597286724549 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<any> {
-    await queryRunner.dropForeignKey('customers', 'CustomerOrder');
+    await queryRunner.dropForeignKey('orders', 'CustomerOrder');
   }
 }

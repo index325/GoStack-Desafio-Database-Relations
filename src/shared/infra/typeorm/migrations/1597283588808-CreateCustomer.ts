@@ -14,6 +14,10 @@ export class CreateCustomer1597283588808 implements MigrationInterface {
             default: 'uuid_generate_v4()',
           },
           {
+            name: 'name',
+            type: 'varchar',
+          },
+          {
             name: 'email',
             type: 'varchar',
           },
@@ -33,6 +37,6 @@ export class CreateCustomer1597283588808 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<any> {
-    await queryRunner.dropTable("customers");
+    await queryRunner.dropTable('customers');
   }
 }
