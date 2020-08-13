@@ -20,7 +20,7 @@ export class CreateProduct1597285651139 implements MigrationInterface {
           {
             name: 'price',
             type: 'decimal',
-            precision: 2,
+            precision: 10,
             scale: 2,
           },
           {

@@ -15,8 +15,6 @@ export default class CustomersController {
       email,
     });
 
-    delete customer.id;
-
     return response.json(customer);
   }
 }
